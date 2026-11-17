@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TagLab</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="tag.js" defer></script>
+    <script src="canvas.js" defer></script>
+    <script src="property.js" defer></script>
+    <script src="search.js" defer></script>
+</head>
+<body>
+    <div class="header">TagLab</div>
+    <div class="main">
+        <div class="left">
+            <div class="left-header">
+                <h3>HTML Tags</h3>
+                <p>사용할 태그를 선택하세요.</p>
+            </div>
+
+            <div class="tag-search">
+                <input type="text" class="searchText" placeholder="태그 검색">
+            </div>
+
+            <div class="tag-list">
+                <div class="tag-category">
+                </div>
+            </div>
+        </div>
+        <div class="center">
+            <div class="canvas-header">
+                <h3>미리보기</h3>
+                <button id="reset-button">초기화</button>
+            </div>
+
+            <div class="canvas">
+                <div class="canvas-content"></div>
+
+                <div class="canvas-description">
+                    <h4>태그 설명</h4>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="right-header">
+                <h3>속성 편집</h3>
+                <p>선택한 요소의 속성을 수정하세요.</p>
+            </div>
+
+            <div class="property-content">
+                <p class="empty-property">
+                    태그를 선택하면 속성을 수정할 수 있습니다.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="code">code</div>
+</body>
+</html>
