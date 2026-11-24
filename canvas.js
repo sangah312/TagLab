@@ -91,16 +91,23 @@ function renderExample(tag, container) {
         }
 
         // 표
+        // 표
         case "table": {
             const table = document.createElement("table");
+            table.style.borderCollapse = "collapse";
+            table.style.borderWidth = "1px";
+            table.style.borderStyle = "solid";
+            table.style.borderColor = "#333333";
 
             if (example.headers) {
                 const thead = document.createElement("thead");
                 const tr = document.createElement("tr");
 
-                example.headers.forEach(header => {
+                example.headers.forEach((header) => {
                     const th = document.createElement("th");
                     th.textContent = header;
+                    th.style.border = "1px solid #333333";
+                    th.style.padding = "8px 12px";
                     tr.appendChild(th);
                 });
 
@@ -111,12 +118,14 @@ function renderExample(tag, container) {
             if (example.rows) {
                 const tbody = document.createElement("tbody");
 
-                example.rows.forEach(row => {
+                example.rows.forEach((row) => {
                     const tr = document.createElement("tr");
 
-                    row.forEach(value => {
+                    row.forEach((value) => {
                         const td = document.createElement("td");
                         td.textContent = value;
+                        td.style.border = "1px solid #333333";
+                        td.style.padding = "8px 12px";
                         tr.appendChild(td);
                     });
 
